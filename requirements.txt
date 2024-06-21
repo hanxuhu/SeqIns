@@ -6,7 +6,22 @@ black
 black[jupyter]
 datasets
 fire
-git+https://github.com/huggingface/peft.git
+peft
 transformers>=4.28.0
 sentencepiece
 gradio
+torch>=2.1.0
+torchvision
+torchaudio
+deepspeed
+tokenizers
+evaluate
+packaging
+ninja
+wandb
+antlr4-python3-runtime==4.11
+openai
+cohere
+rouge
+bert_score
+-e git+https://github.com/vllm-project/vllm.git#egg=vllm

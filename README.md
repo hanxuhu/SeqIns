@@ -1,7 +1,7 @@
 # *SIT*: Fine-tuning Large Language Models with Sequential Instructions
 
 
- [[Project Page](https://seqit.github.io/)] [[Data](https://huggingface.co/EdinburghNLP/SeqIns)] [[Model Zoo](https://huggingface.co/HanxuHU/sit_all_models)]
+ [[Project Page](https://seqit.github.io/)] [[Data](https://huggingface.co/EdinburghNLP/SeqIns)] [[Model Zoo](https://huggingface.co/collections/HanxuHU/seqinst-models-667536ee1192e834e9ae02d2)]
 
 This is the code to replicate the sequential instruction tuning experiments in the paper [*SIT*: Fine-tuning Large Language Models with Sequential Instructions](https://arxiv.org/pdf/2403.07794). [[cite]](#citation)
 
@@ -11,10 +11,12 @@ Our implementation is based on the [Open-Instruct](https://github.com/allenai/op
 
 ## Setup
 
-For text-only experiments 
+For text-only experiments
 ```bash
 #Prepare enviornment
-bash scripts/start_k8s.sh
+conda create -n seq_ins python=3.8
+conda activate seq_ins
+bash setup.sh
 ```
 
 For vision-language experiments
@@ -44,9 +46,9 @@ bash self-seq/scripts/generation_flancot_llama_70b.sh
 ```
 
 ## Train
-To train both sequential instruction and original instruction data, you can specify your preferred LLM, path of training dataset at `scripts/finetune_accelerate_tulu.sh` and running:
+To train both sequential instruction and original instruction data, you can specify your preferred LLM, path of training dataset at `scripts/alpaca/finetune_accelerate_sit_llama_70b.sh` and running:
 ```bash
-bash scripts/finetune_accelerate_tulu.sh
+bash scripts/alpaca/finetune_accelerate_sit_llama_70b.sh
 ```
 
 Train on vision-langauge data, you can first specify the pre-trained checkpoint at `./LAVIS/lavis/configs/models/blip2`
@@ -78,7 +80,6 @@ Please consider citing us if you use our materials.
       year={2024},
       eprint={2403.07794},
       archivePrefix={arXiv},
-      primaryClass={id='cs.CL' full_name='Computation and Language' is_active=True alt_name='cmp-lg' in_archive='cs' is_general=False description='Covers natural language processing. Roughly includes material in ACM Subject Class I.2.7. Note that work on artificial languages (programming languages, logics, formal systems) that does not explicitly address natural-language issues broadly construed (natural-language processing, computational linguistics, speech, text retrieval, etc.) is not appropriate for this area.'}
 }
 ```
 

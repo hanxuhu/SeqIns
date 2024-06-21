@@ -1,4 +1,4 @@
-INPUT_FILE=self-seq/data/flancot_full/flancot100k
+INPUT_FILE=self-seq/data/alpaca/alpaca.jsonl
 
 if [ ! -f $INPUT_FILE ]; then
     echo "File not found!"

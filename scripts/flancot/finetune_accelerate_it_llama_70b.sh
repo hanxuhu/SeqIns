@@ -4,8 +4,8 @@ MODEL_SIZE=7B
 NUM_GPUS=2
 BATCH_SIZE_PER_GPU=1
 TOTAL_BATCH_SIZE=128
-TRAIN_FILE=self-seq/data/alpaca_original/alpaca_r_plus.jsonl
-MODEL_NAME_OR_PATH=/mnt/nfs/public/hf/models/meta-llama/Meta-Llama-3-8B
+TRAIN_FILE=self-seq/data/flancot_extract_refine/flancot_llama70b_direct_response.jsonl
+MODEL_NAME_OR_PATH=meta-llama/Meta-Llama-3-8B
 MODEL_NAME=$(basename $MODEL_NAME_OR_PATH)
 
 GRADIENT_ACC_STEPS=$(($TOTAL_BATCH_SIZE/$NUM_GPUS/$BATCH_SIZE_PER_GPU))
@@ -31,13 +31,13 @@ accelerate launch \
     --preprocessing_num_workers 64 \
     --per_device_train_batch_size $BATCH_SIZE_PER_GPU \
     --gradient_accumulation_steps $GRADIENT_ACC_STEPS \
+    --gradient_checkpointing \
     --learning_rate 2e-5 \
     --lr_scheduler_type linear \
     --warmup_ratio 0.03 \
     --weight_decay 0. \
     --num_train_epochs 3 \
-    --gradient_checkpointing \
-    --output_dir output/self-seq-${MODEL_NAME}-alpaca_rplus/ \
+    --output_dir output/self-seq-${MODEL_NAME}-flancot_extract_input_sit_llama_70b-1/ \
     --prompt_template tulu \
     --with_tracking \
     --do_eval \
@@ -46,4 +46,7 @@ accelerate launch \
     --report_to wandb \
     --logging_steps 5
 
-bash scripts/eval/eval_auto_mistral.sh output/self-seq-${MODEL_NAME}-alpaca_rplus self-seq-${MODEL_NAME}-alpaca_rplus > eval_results/self-seq-${MODEL_NAME}-alpaca_rplus.log
+# bash scripts/prepare_eval_data.sh
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:False
+# bash scripts/eval/eval_auto_mistral.sh output/self-seq-${MODEL_NAME}-flancot_sit_llama_70b self-seq-${MODEL_NAME}-flancot_sit_llama_70b > eval_results/self-seq-${MODEL_NAME}-flancot_sit_llama_70b.log
+bash scripts/evaluation.sh output/self-seq-${MODEL_NAME}-flancot_sit_llama_70b
