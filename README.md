@@ -3,7 +3,7 @@
 
  [[Project Page](https://seqit.github.io/)] [[Data](https://huggingface.co/EdinburghNLP/SeqIns)] [[Model Zoo](https://huggingface.co/HanxuHU/sit_all_models)]
 
-This is the code to replicate the sequential instruction tuning experiments in the paper [*Fine-tuning Large Language Models with Sequential Instructions*]. [[cite]](#citation)
+This is the code to replicate the sequential instruction tuning experiments in the paper [*SIT*: Fine-tuning Large Language Models with Sequential Instructions*](https://arxiv.org/pdf/2403.07794). [[cite]](#citation)
 
 Our implementation is based on the [Open-Instruct](https://github.com/allenai/open-instruct) and [LAVIS](https://github.com/salesforce/LAVIS/tree/main) repository.
 
