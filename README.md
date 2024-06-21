@@ -16,7 +16,6 @@ For text-only experiments
 #Prepare enviornment
 bash scripts/start_k8s.sh
 ```
-Training on generalised SIT
 
 For vision-language experiments
 ```bash
@@ -37,9 +36,18 @@ for vision-langauge data:
 cd LAVIS
 bash download_vqa.sh
 ```
+## Generation SIT data
+Convert original instruction tuning dataset to sequential version:
+
+```bash
+bash self-seq/scripts/generation_flancot_llama_70b.sh
+```
 
 ## Train
-To train both sequential instruction and original instruction data, you can specify your preferred LLM, path of training dataset at `scripts/finetune_accelerate_tulu.sh`
+To train both sequential instruction and original instruction data, you can specify your preferred LLM, path of training dataset at `scripts/finetune_accelerate_tulu.sh` and running:
+```bash
+bash scripts/finetune_accelerate_tulu.sh
+```
 
 Train on vision-langauge data, you can first specify the pre-trained checkpoint at `./LAVIS/lavis/configs/models/blip2`
 
