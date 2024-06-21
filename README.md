@@ -62,7 +62,7 @@ First, you should prepare evaluation datasets:
 bash scripts/prepare_eval_data.sh
 ```
 
-Then, you can run eval of all general and sequential tasks:
+Then, you can run eval of all general and sequential tasks, please replace YOUR_MODEL_NAME as the path of your trained models
 
 ```bash
 bash scripts/evaluation.sh YOUR_MODEL_NAME
