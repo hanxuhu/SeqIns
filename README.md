@@ -7,7 +7,7 @@ This is the code to replicate the sequential instruction tuning experiments in t
 
 Our implementation is based on the [Open-Instruct](https://github.com/allenai/open-instruct) and [LAVIS](https://github.com/salesforce/LAVIS/tree/main) repository.
 
-![SIT](mainfigure_seq.jpg)
+![SIT](mainfig_preprint.jpg)
 
 ## Setup
 
