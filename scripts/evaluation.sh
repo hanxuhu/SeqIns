@@ -6,8 +6,6 @@ NUM_GPUS=2
 BATCH_SIZE_PER_GPU=2
 EVAL_BATCH_SIZE_PER_GPU=4
 TOTAL_BATCH_SIZE=64
-MODEL_NAME_OR_PATH=meta-llama/Llama-2-7b-hf
-
 
 export PYTHONPATH="$PWD:$PYTHONPATH"
 
@@ -24,7 +22,7 @@ fi
 # bash lm-evaluation-harness/eval_model.sh $MODEL self-seq-$MODEL_NAME > eval_results/$MODEL_NAME/self-seq-$MODEL_NAME.log
 
 # Evaluation script for GSM, MGSM, CodeX-HumanEval, Alpaca-eval
-bash scripts/eval/eval_auto_mistral.sh $MODEL self-seq-$MODEL_NAME > eval_results/$MODEL_NAME/self-seq-$MODEL_NAME.log
+bash scripts/eval/eval_auto.sh $MODEL self-seq-$MODEL_NAME > eval_results/$MODEL_NAME/self-seq-$MODEL_NAME.log
 
 # Run evaluation on MMLU, ARC, GSM8K
 bash lm-evaluation-harness/eval_model.sh $MODEL > eval_results/$MODEL_NAME/self-seq-$MODEL_NAME-hf.log
