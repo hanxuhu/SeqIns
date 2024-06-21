@@ -72,13 +72,13 @@ bash scripts/evaluation.sh
 ## Citation
 Please consider citing us if you use our materials.
 ```
-@misc{hu2024finetuning,
-      title={Fine-tuning Large Language Models with Sequential Instructions}, 
-      author={Hanxu Hu and Pinzhen Chen and Edoardo M. Ponti},
+@misc{hu2024sit,
+      title={SIT: Fine-tuning Large Language Models with Sequential Instructions}, 
+      author={Hanxu Hu and Simon Yu and Pinzhen Chen and Edoardo M. Ponti},
       year={2024},
       eprint={2403.07794},
       archivePrefix={arXiv},
-      primaryClass={cs.CL}
+      primaryClass={id='cs.CL' full_name='Computation and Language' is_active=True alt_name='cmp-lg' in_archive='cs' is_general=False description='Covers natural language processing. Roughly includes material in ACM Subject Class I.2.7. Note that work on artificial languages (programming languages, logics, formal systems) that does not explicitly address natural-language issues broadly construed (natural-language processing, computational linguistics, speech, text retrieval, etc.) is not appropriate for this area.'}
 }
 ```
 
