@@ -65,7 +65,7 @@ bash scripts/prepare_eval_data.sh
 Then, you can run eval of all general and sequential tasks:
 
 ```bash
-bash scripts/evaluation.sh
+bash scripts/evaluation.sh YOUR_MODEL_NAME
 ```
 
 
