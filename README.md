@@ -1,3 +1,4 @@
+![SIT](sit_logo.jpg)
 # *SIT*: Fine-tuning Large Language Models with Sequential Instructions
 
 
