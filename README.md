@@ -1,7 +1,7 @@
 # *SIT*: Fine-tuning Large Language Models with Sequential Instructions
 
 
- [[Project Page](https://seqit.github.io/)] [[Data](https://huggingface.co/EdinburghNLP/SeqIns)] [[Model Zoo](https://huggingface.co/collections/HanxuHU/seqinst-models-667536ee1192e834e9ae02d2)]
+ [[Project Page](https://seqit.github.io/)] [[Data](https://huggingface.co/collections/HanxuHU/sequential-instruction-datasets-667687a3aacacf620e3cf857)] [[Model Zoo](https://huggingface.co/collections/HanxuHU/seqinst-models-667536ee1192e834e9ae02d2)]
 
 This is the code to replicate the sequential instruction tuning experiments in the paper [*SIT*: Fine-tuning Large Language Models with Sequential Instructions](https://arxiv.org/pdf/2403.07794). [[cite]](#citation)
 
