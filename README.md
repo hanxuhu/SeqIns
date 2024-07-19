@@ -75,12 +75,11 @@ bash scripts/evaluation.sh YOUR_MODEL_NAME
 ## Citation
 Please consider citing us if you use our materials.
 ```
-@misc{hu2024sit,
-      title={SIT: Fine-tuning Large Language Models with Sequential Instructions}, 
-      author={Hanxu Hu and Simon Yu and Pinzhen Chen and Edoardo M. Ponti},
-      year={2024},
-      eprint={2403.07794},
-      archivePrefix={arXiv},
+@article{hu2024fine,
+  title={Fine-tuning Large Language Models with Sequential Instructions},
+  author={Hu, Hanxu and Yu, Simon and Chen, Pinzhen and Ponti, Edoardo M},
+  journal={arXiv preprint arXiv:2403.07794},
+  year={2024}
 }
 ```
 
